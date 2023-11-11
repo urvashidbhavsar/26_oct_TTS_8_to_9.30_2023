@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- action => give a page name which u open after click on button.
+        if you cant open any page set #.
+        
+        method => 
+        there is 2 type.
+        (1) get => display form information in URL.
+        (2) post => wrap form information and send to the next page.
+
+        tags are used in form : 
+        (1) form (2) input (3) label 
+        (4) button (5) textarea (6) select-option
+        (7) datalist 
+    -->
+    <center>
+        <form action="#" name="form1" method="post">
+            <!-- input type = text  -->
+            <label for="username">Name : </label>
+            <!-- value="123" readonly -->
+            <!-- required maxlength="10" minlength="3" -->
+            <input type="text" name="uname" id="username" placeholder="Enter name">
+            <br><br>
+
+            <!-- input type password -->
+            <label for="">password :</label>
+            <input type="password" name="" id="">
+            <br><br>
+
+            <!-- input type date (updated) -->
+            <label for="">date</label>
+            <input type="date" name="" id="">
+            <br><br>
+
+            <label for="">date time</label> <!--updated-->
+            <input type="datetime-local" name="" id="">
+            <br><br>
+
+            <label for="">Time</label>
+            <input type="time"> <!--updated-->
+            <br><br>
+
+            <label for="">month </label>
+            <input type="month" name="" id=""> <!--updated-->
+            <br><br>
+
+            <label for="">color</label>
+            <input type="color" name="" id=""> <!--updated-->
+            <br><br>
+
+            <label for="">upload photo</label>
+            <input type="file" name="" id="">
+            <br><br>
+
+            <label for="">email </label>
+            <input type="email" name="" id=""> <!--updated-->
+            <br><br>
+
+            <label for="">week</label>
+            <input type="week" name="" id=""> <!--updated-->
+            <br><br>
+
+            <label for="">number :</label>
+            <input type="number" name="" id="">
+            <br><br>
+
+            <input type="range" name="" id=""> <!--updated-->
+            <br><br>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Clear</button>
+            <button type="button">Button</button>
+            <br><br>
+
+            <input type="submit" name="" id="" value="add">
+            <input type="reset" name="" id="" value="clear">
+            <input type="button" name="" id="" value="button">
+        </form>
+    </center>
+</body>
+
+</html>

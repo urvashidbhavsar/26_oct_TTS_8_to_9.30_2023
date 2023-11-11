@@ -1,0 +1,14 @@
+according layout there is 2 type of tag :
+(1) sementic tag => tag has meaning for ex, <p>, <b>, <i> etc 
+(2) non-sementic tag => tag tells nothing about their.
+    for ex, <div> and <span> 
+
+layout tags :
+<header>
+<footer>
+<article>
+<aside> 
+<section>
+<main>
+<nav>
+<div>

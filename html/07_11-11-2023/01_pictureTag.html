@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- it is used to change image at diff device -->
+    <!-- max means perform task in given range -->
+    <!-- <picture>
+        <source media="(max-width: 600px)" srcset="img2.jpg" type="image/jpg">
+        <source media="(max-width: 1000px)" srcset="img3.jpg" type="image/jpg">
+        <img src="img1.webp" alt="" height="300px" width="400px">
+    </picture> -->
+
+    <!-- min means perform task out of range -->
+    <picture>
+        <source media="(min-width: 1000px)" srcset="img3.jpg" type="image/jpg">
+        <source media="(min-width: 600px)" srcset="img2.jpg" type="image/jpg">
+        <img src="img1.webp" alt="" height="300px" width="400px">
+    </picture>
+</body>
+
+</html>
