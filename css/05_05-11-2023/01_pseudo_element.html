@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        h1::after {
+            content: "\2665";
+        }
+
+        h1::before {
+            content: "\0040";
+        }
+
+        .div1 {
+            height: auto;
+            width: 400px;
+            border: 2px solid black;
+            padding: 20px;
+        }
+
+        .div1::first-letter {
+            font-size: 30px;
+            color: blue;
+        }
+
+        .div1::first-line {
+            color: red;
+        }
+
+        .div1::selection {
+            background-color: black;
+            color: thistle;
+        }
+
+        li::marker {
+            color: magenta;
+        }
+
+        input::placeholder {
+            text-align: center;
+            font-size: 12px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- pseudo element start with :: symbol -->
+    <h1>Hello world</h1>
+    <i class="fa-solid fa-user"></i>
+    <div class="div1">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae minus dicta aut sit a ut cum similique, sunt
+        reprehenderit neque cumque repellat, veniam nisi maiores voluptates, esse harum expedita soluta.
+    </div>
+    <ul>
+        <li>List 1</li>
+        <li>List 2</li>
+    </ul>
+    enter name : <input type="text" name="" id="" placeholder="Enter name">
+</body>
+
+</html>
