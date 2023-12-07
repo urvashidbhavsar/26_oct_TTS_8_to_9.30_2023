@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            height: 329px;
+            width: 650px;
+            padding: 20px;
+            border: 20px dashed red;
+            background-image: url(https://img.freepik.com/premium-photo/glass-bottle-with-planet-earth_145644-18150.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+
+            /* do not show background image repetation */
+            background-origin: border-box;
+
+            /* apply only content area */
+            /* background-origin: content-box; */
+            /* background-origin: padding-box; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- background origin use for setup background image -->
+    <div class="div1"></div>
+</body>
+
+</html>
