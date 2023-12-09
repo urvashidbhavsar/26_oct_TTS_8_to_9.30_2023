@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* relative like a parent
+            absolute like a child*/
+        .mydiv {
+            height: 100px;
+            width: 100px;
+        }
+
+        .main {
+            position: relative;
+            width: 50%;
+        }
+
+        .div1 {
+            background-color: chartreuse;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .div2 {
+            background-color: cornflowerblue;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+
+        .div3 {
+            background-color: brown;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="div1 mydiv"></div>
+        <div class="div2 mydiv"></div>
+        <div class="div3 mydiv"></div>
+    </div>
+</body>
+
+</html>
