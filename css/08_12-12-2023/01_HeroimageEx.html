@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .bgimage {
+            background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            /* height: 600px; */
+            padding-top: 180px;
+            padding-bottom: 180px;
+            /* filter: brightness(50%); */
+            position: relative;
+            z-index: 2;
+        }
+
+        .bgimage::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.619);
+            /* opacity: ; */
+            z-index: -1;
+        }
+
+        .text {
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 43px;
+            color: white;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: white;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            height: 40px;
+            width: 120px;
+            border: 3px ridge white;
+            background-color: rgba(255, 255, 255, 0.218);
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Heroimage">
+        <div class="bgimage">
+            <div class="text">
+                <h1>my awesome website</h1>
+                <p>Look at this website and bask in itsamazing glory!</p>
+                <div>
+                    <button class="btn">Go ahead
+                        <span class="fa-solid fa-arrow-up-right-from-square"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
