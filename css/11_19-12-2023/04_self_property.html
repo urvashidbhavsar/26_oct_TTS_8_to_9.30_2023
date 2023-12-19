@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .icon {
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            /* display: flex; */
+            /* when we apply display flex, only align-self property effected */
+            display: grid;
+            /* when we apply display grid, both align-self and jusfity self effected. */
+        }
+
+        span {
+            font-size: 30px;
+            /* both are effected in child class */
+            /* align-self: center;
+            justify-self: center; */
+            /* short hand of align-self and justify-self */
+            place-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="icon">
+        <span class="fa-regular fa-user"></span>
+    </div>
+</body>
+
+</html>
