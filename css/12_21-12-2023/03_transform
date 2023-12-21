@@ -1,0 +1,8 @@
+how to element transformation in other.
+
+(1) rotate 
+(2) translate  = movement 
+(3) skew = rotate on one angle 
+(4) scale = like a zoom effect 
+(5) matrix = all combined 
+(6) perspective = view of element (show only 3d effect)

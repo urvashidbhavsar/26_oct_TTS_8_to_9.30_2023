@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 150px;
+            width: 150px;
+            background-color: cadetblue;
+            font-size: 25px;
+            margin: 10px auto;
+            transition: 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+        }
+
+        .div1:hover {
+            transform: rotate(-360deg);
+            /* rotate: -360deg; */
+        }
+
+        .div2:hover {
+            transform: rotateX(180deg);
+            /*flipping*/
+        }
+
+        .div3:hover {
+            transform: rotateY(180deg);
+        }
+
+        .div4:hover {
+            transform: rotateX(55deg) rotateY(311deg) rotateZ(101deg);
+        }
+
+        .div5:hover {
+            transform: rotate3d(0.5, 2, 0.6, 262deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">div 1</div>
+    <div class="div2">div 2</div>
+    <div class="div3">div 3</div>
+    <div class="div4">div 4</div>
+    <div class="div5">div 5</div>
+</body>
+
+</html>

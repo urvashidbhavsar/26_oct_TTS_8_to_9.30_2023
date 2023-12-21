@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: cadetblue;
+            font-size: 25px;
+            margin: 40px auto;
+            transition: 1s ease-in-out;
+        }
+
+        .div1:hover {
+            transform: translate(-50px, 20px);
+        }
+
+        .div2:hover {
+            transform: translateX(50px);
+        }
+
+        .div3:hover {
+            transform: translateY(50px);
+        }
+
+        .div4:hover {
+            transform: translateZ(30px);
+        }
+
+        .div5:hover {
+            transform: translate3d(20px, 30px, 20px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">div 1</div>
+    <div class="div2">div 2</div>
+    <div class="div3">div 3</div>
+    <div class="div4">div 4</div>
+    <div class="div5">div 5</div>
+</body>
+
+</html>
