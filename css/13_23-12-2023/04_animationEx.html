@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .main {
+            height: 300px;
+            width: 300px;
+            margin: 150px auto;
+            display: grid;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .lineMove {
+            height: 5px;
+            width: 200px;
+            background-color: rebeccapurple;
+            animation: move 2s linear infinite;
+        }
+
+        .sub {
+            font-size: 30px;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(-320px);
+            }
+
+            100% {
+                transform: translateX(320px);
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="sub">Loading...
+            <div class="lineMove"></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cube {
+            height: 200px;
+            width: 200px;
+            margin: 150px auto;
+            /* transform: perspective(200px); */
+            perspective: 200px;
+            /* x and y */
+            perspective-origin: 300px 345px;
+        }
+
+        .cubeShow {
+            transform: translateZ(-50px);
+            height: 200px;
+            width: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+
+        .cubeDiv {
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            display: grid;
+            place-content: center;
+            font-size: 50px;
+            color: white;
+        }
+
+        .front {
+            background-color: rgba(0, 0, 139, 0.6);
+            transform: rotate(0deg) translateZ(100px);
+        }
+
+        .back {
+            background-color: rgba(139, 0, 139, 0.6);
+            transform: rotate(0deg) translateZ(-100px);
+        }
+
+        .left {
+            background-color: rgb(75, 0, 130, 0.6);
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .right {
+            background-color: rgb(0, 128, 0, 0.6);
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .top {
+            background-color: rgb(0, 139, 139, 0.6);
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .bottom {
+            background-color: rgb(128, 0, 0, 0.6);
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cube">
+        <div class="cubeShow">
+            <div class="cubeDiv front">1</div>
+            <div class="cubeDiv back">2</div>
+            <div class="cubeDiv left">3</div>
+            <div class="cubeDiv right">4</div>
+            <div class="cubeDiv top">5</div>
+            <div class="cubeDiv bottom">6</div>
+        </div>
+    </div>
+</body>
+
+</html>
