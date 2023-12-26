@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            height: 250px;
+            width: 250px;
+            margin: 180px auto;
+            position: relative;
+        }
+
+        .movecirlce {
+            height: 210px;
+            width: 210px;
+            position: absolute;
+            top: 9px;
+            left: 9px;
+            border-left: 12px solid #094136;
+            border-right: 12px solid #094136;
+            border-bottom: 12px solid transparent;
+            border-top: 12px solid transparent;
+            border-radius: 50%;
+            animation: moveBorder 2s linear infinite;
+        }
+
+        .outerCircle {
+            height: 200px;
+            width: 200px;
+            background-color: gray;
+            border-radius: 50%;
+            position: absolute;
+            top: 26px;
+            left: 26px;
+        }
+
+        .innerCircle {
+            height: 120px;
+            width: 120px;
+            background-color: #094136;
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            border-radius: 50%;
+            /* animation: circleScale 0.6s linear infinite alternate; */
+        }
+
+        @keyframes circleScale {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes moveBorder {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+
+            100% {
+                transform: rotate(360deg) scale(1.2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="movecirlce"></div>
+        <div class="outerCircle">
+            <div class="innerCircle"></div>
+        </div>
+    </div>
+</body>
+
+</html>
