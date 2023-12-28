@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: cursive;
+        }
+
+        .imageOverlay {
+            height: 300px;
+            width: 300px;
+            border: 1px solid black;
+            margin: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        img {
+            height: auto;
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        .text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            color: white;
+            display: grid;
+            place-content: center;
+            height: 100%;
+            width: 100%;
+            transition: 0.5s ease-in-out;
+            transform: scale(0);
+            /* transform-origin: 100% 0%; */
+            background-color: rgba(0, 0, 0, 0.636);
+            overflow: hidden;
+        }
+
+        .textdelay {
+            transform: translateY(180px);
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .imageOverlay:hover .text {
+            transform: scale(1) rotateX(360deg);
+        }
+
+        .imageOverlay:hover .textdelay {
+            transition-delay: 1s;
+            transform: translateY(0px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="imageOverlay">
+        <div class="">
+            <img src="https://th.bing.com/th/id/OIG.b7fbyFnoRp_h0eDim7rl" alt="">
+        </div>
+        <div class="text"> <!--background-->
+            <div class="textdelay"> <!--delay-->
+                <h1>My Image</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            padding: 50px;
+            justify-items: center;
+        }
+
+        a {
+            color: blue;
+            font-size: 50px;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .link1::after {
+            content: "";
+            height: 3px;
+            width: 100%;
+            background-color: red;
+            display: block;
+            transition: 0.4s ease;
+            transform: scale(0);
+        }
+
+        .link1:hover::after {
+            transform: scale(1);
+        }
+
+        .link2::after {
+            content: "";
+            height: 3px;
+            width: 100%;
+            background-color: red;
+            display: block;
+            transition: 0.4s ease;
+            transform: scaleY(0);
+        }
+
+        .link2:hover::after {
+            transform: scaleY(1);
+        }
+
+        .link3::after {
+            content: "";
+            height: 3px;
+            width: 100%;
+            background-color: red;
+            display: block;
+            transition: 0.4s ease;
+            transform: scaleX(0);
+        }
+
+        .link3:hover::after {
+            transform: scaleX(1);
+        }
+
+        .link4::after {
+            content: "";
+            height: 3px;
+            width: 100%;
+            background-color: red;
+            display: block;
+            transition: 0.4s ease;
+            transform: scaleX(0);
+            transform-origin: 100% 0%;
+        }
+
+        .link4:hover::after {
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <a href="" class="link1">click here</a>
+        </div>
+        <div>
+            <a href="" class="link2">click here</a>
+        </div>
+        <div>
+            <a href="" class="link3">click here</a>
+        </div>
+        <div>
+            <a href="" class="link4">click here</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: cursive;
+        }
+
+        .imageOverlay {
+            height: 300px;
+            width: 300px;
+            border: 1px solid black;
+            margin: 50px;
+            position: relative;
+        }
+
+        img {
+            height: auto;
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        .text {
+            position: absolute;
+            /* top: 0; */
+            left: 0;
+            right: 0;
+            bottom: 0;
+            color: white;
+            display: grid;
+            place-content: center;
+            height: 0;
+            width: 100%;
+            overflow: hidden;
+            transition: 0.4s ease-in-out;
+            background-color: rgba(0, 0, 0, 0.636);
+        }
+
+        .imageOverlay:hover .text {
+            height: 100%;
+            /* width: 100%; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="imageOverlay">
+        <div class="">
+            <img src="https://th.bing.com/th/id/OIG.b7fbyFnoRp_h0eDim7rl" alt="">
+        </div>
+        <div class="text">
+            <h1>My Image</h1>
+        </div>
+    </div>
+</body>
+
+</html>
