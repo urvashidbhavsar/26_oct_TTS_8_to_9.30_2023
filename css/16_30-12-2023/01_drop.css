@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+/* ============================ */
+.MenuBar{
+    background-color: rgb(8, 76, 61);
+}
+.MenuBar .menu-bar{
+    padding: 10px 20px;
+    display: flex;
+    gap: 30px;
+}
+.MenuBar .menu-bar li{
+    padding: 5px;
+}
+.MenuBar .menu-bar a{
+    color: white;
+    font-size: 25px;
+}
+.MenuBar .dropdown{
+    position: relative;
+}
+.MenuBar .dropmenu{
+    background-color: rgb(4, 39, 31);
+    display: none;
+    position: absolute;
+    top: 44px;
+    left: 0;
+    width: 161px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 4px black;
+}
+.MenuBar .dropdown:hover .dropmenu{
+    display: block;
+}
+.MenuBar .dropdown .fa-angle-down{
+    color: white;
+    transition: 0.3s ease;
+}
+.MenuBar .dropdown:hover .fa-angle-down{
+    transform: rotate(-180deg);
+}
+.MenuBar .dropmenu1{
+    display: none;
+    position: relative;
+}
+.MenuBar .dropdown1:hover .dropmenu1{
+    display: block;
+    position: absolute;
+    background-color: rgb(4, 39, 31);
+    width: 181px;
+    left: 161px;
+    top: 63px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 4px black;
+}
+.MenuBar .dropdown1 .fa-angle-right{
+    font-size: 20px;
+    color: white;
+    transition: 0.3s ease;
+}
+.MenuBar .dropdown1:hover .fa-angle-right{
+    transform: translateX(10px);
+}

@@ -1,0 +1,9 @@
+set website responsive.
+
+device name                 size 
+mobile                      max-width:576px 
+max mobile                  min-width:576px
+tablet                      min-width:768px 
+mini-leptop                 min-width:992px 
+large-leptop                min-width:1200px 
+extra large leptop          min-width:1400px 
