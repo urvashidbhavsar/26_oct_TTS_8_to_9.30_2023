@@ -1,0 +1,476 @@
+/* ========= common css =========== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html{
+    font-family: "Hind Siliguri",sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.container{
+    max-width: 1400px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.btn{
+    padding: 15px 30px;
+    border: none;
+    border-radius: 7px;
+    font-size: 17px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.btnoranged{
+    background-color: orangered;
+    color: white;
+}
+.btnoranged:hover{
+    background-color: rgb(232, 65, 4);
+}
+.btnwhite{
+    background-color: white;
+    color: orangered;
+}
+.btnwhite:hover{
+    background-color: orangered;
+    color: white;
+}
+/* ================================================= */
+header{
+    /* background-color: rgb(13, 53, 126); */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 111;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 7px 0px black;
+}
+header .topheader{
+    display: flex;
+    justify-content: end;
+    padding: 14px 0px;
+}
+header .topheader .contact{
+    display: flex;
+    gap: 30px;
+}
+header .topheader .contact .socialIcon{
+    display: flex;
+    gap: 20px;
+}
+header .topheader .contact a{
+    color: white;
+}
+header .topheader .contact a:hover{
+    color: orangered;
+}
+/* ======================== */
+header .navbar{
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+}
+header .navbar .logo{
+    flex: 0.4;
+    line-height: 1.3;
+}
+header .navbar .logo h1{
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+header .navbar .logo h1 span{
+    color: orangered;
+}
+header .navbar .logo p{
+    color: white;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+header .navbar .nav{
+    flex: 2;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+header .navbar .nav ul{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+header .navbar .nav ul a{
+    color: white;
+}
+header .navbar .nav .searchForm{
+    position: relative;
+}
+header .navbar .nav .searchForm input[type="text"]{
+    height: 39px;
+    width: 205px;
+    padding-left: 10px;
+    padding-right: 35px;
+    font-size: 16.2px;
+    letter-spacing: 1px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}  
+header .navbar .nav .searchForm input[type="text"]:focus-visible{
+    outline: none;
+} 
+header .navbar .nav .searchForm span{
+    position: absolute;
+    right: 7px;
+    top: 12px;
+    color: gray;
+}
+header .navbar .icon{
+    flex: 0.2;
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    align-items: center;
+    color: white;
+}
+header .navbar .icon .menubtn{
+    display: none;
+}
+header .navbar .icon .bar{
+    height: 34px;
+    width: 34px;
+    background: orangered;
+    color: white;
+    font-size: 19px;
+    border: none;
+    border-radius: 3px;
+}
+/* ================================================ */
+.homepage .homebgimage{
+    background-image: url(../images/banner.jpg);
+    padding: 130px 0;
+    position: relative;
+    z-index: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.homepage .homebgimage::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(5, 5, 126, 0.7);
+    z-index: -1;
+}
+.homepage .home-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.homepage .home-grid .home-banner-text{
+    padding: 40px 0;
+}
+.homepage .home-grid .home-banner-text .title{
+    color: orangered;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.homepage .home-grid .home-banner-text .bannertext{
+    /* font-size: 60px; */
+    font-size: calc(16px + 3vw);
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}   
+.homepage .home-grid .home-banner-text .subtext{
+    color: white;
+    font-size: 17px;
+}
+.homepage .home-grid .home-banner-text .banner-btns{
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+}
+.homepage .home-grid .video-play{
+    display: grid;
+    place-items: center;
+}
+.homepage .home-grid .play-btn{
+    height: 80px;
+    width: 80px;
+    background-color: white;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 25px;
+    color: orangered;
+    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+    animation: ripple 3s linear infinite;
+}
+.homepage .home-grid .play-btn:hover{
+    transform: scale(1.2);
+}
+/* create an animation */
+@keyframes ripple {
+     0% {
+        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.8), 0px 0px 0px 10px rgba(255, 255, 255, 0.571), 0px 0px 0px 20px rgba(255, 255, 255, 0.385);
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.648), 0px 0px 0px 20px rgba(255, 255, 255, 0.314), 0px 0px 0px 40px rgba(255, 255, 255, 0.088);
+    }
+}
+/* ======================================================================= */
+.contactInfo .contact-p{
+    padding: 30px 0;
+}
+.contactInfo .gridBox{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.contactInfo .gridBox h3{
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+.contactInfo .gridBox p,a{
+    color: rgb(93, 93, 93);
+    font-size: 17px;
+}
+.contactInfo .gridBox .news{
+    display: flex;
+    gap: 5px;
+}
+.contactInfo .gridBox input[type="text"]{
+    height: 50px;
+    width: 100%;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 17px;
+    border: 1px solid rgba(93, 93, 93, 0.379);
+    border-radius: 5px;
+    background-color: rgba(93, 93, 93, 0.1);
+}
+.contactInfo .gridBox input[type="text"]:focus-visible{
+    outline: none;
+    border:1px solid orangered;
+}
+/* ========================================================== */
+.serviceSec{
+    background-color: rgba(208, 205, 198, 0.541);
+}
+.serviceSec .service-p{
+    padding: 50px 0;
+}
+.serviceSec .title{
+    text-align: center;
+}
+.serviceSec .title .top-title{
+    text-transform: uppercase;
+    color: orangered;
+    font-size: 14px;
+    font-weight: 500;
+}
+.serviceSec .title .main-title{
+    text-transform: capitalize;
+    font-size: calc(16px + 1.8vw);
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+}
+.serviceSec .gridBox{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 30px 0;
+}
+.serviceSec .gridBox .box{
+    padding: 30px;
+}
+.serviceSec .gridBox .box .icon{
+    height: 80px;
+    width: 80px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: white;
+    display: grid;
+    place-content: center;
+    transition: 0.2s ease;
+}
+.serviceSec .gridBox .box span{
+    font-size: 30px;
+    color: orangered;
+    transition: 0.2s ease;
+}
+.serviceSec .gridBox .box:hover .icon{
+    background-color: orangered;
+}
+.serviceSec .gridBox .box:hover span{
+    color: white;
+}
+.serviceSec .gridBox .box .fa-truck{
+    transform: rotateY(180deg);
+}
+.serviceSec .gridBox .box .text{
+    text-align: center;
+    padding-top: 20px;
+}
+.serviceSec .gridBox .box .text a{
+    color: black;
+    font-size: 22px;
+    transition: 0.2s ease;
+}
+.serviceSec .gridBox .box .text a:hover{
+    color: orangered;
+}
+.serviceSec .gridBox .box .text p{
+    color: rgb(93, 93, 93);
+}
+/* ===================================== */
+.deliverSec .d-info{
+    display: flex;
+}
+.deliverSec .d-info .bgimage{
+    flex: 1;
+    background: url(../images/banner3.jpg) right;
+    background-size: 130%;
+    filter: brightness(50%);
+}
+.deliverSec .d-info .packingInfo{
+    flex: 1;
+}
+.deliverSec .d-info .packingInfo .con-padd{
+    padding: 70px 50px;
+}
+.deliverSec .d-info .packingInfo .top-title{
+    font-size: 14px;
+    color: orangered;
+    font-weight: bold;
+    padding-bottom: 15px;
+    letter-spacing: 2px;
+}
+.deliverSec .d-info .packingInfo .title{
+    font-size: calc(2vw + 16px);
+    padding-bottom: 15px;
+}
+.deliverSec .d-info .packingInfo .info-title{
+    color: rgb(93, 93, 93);
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.2;
+}
+.deliverSec .d-info .packingInfo .count-info{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    padding-top: 30px;
+}
+.deliverSec .d-info .packingInfo .count-info span{
+    color:orangered;
+    font-size: 29px;
+}
+.deliverSec .d-info .packingInfo .count-info h1{
+    font-size: calc(1.5vw + 16px);
+    font-weight: 500;
+    padding: 10px 0;
+}
+.deliverSec .d-info .packingInfo .count-info .count-p{
+    color:orangered;
+    font-weight: 500;
+}
+/* =============================================== */
+.QuoteForm{
+    background-color: antiquewhite;
+}
+.QuoteForm .Quote-p{
+    padding: 50px 0;
+}
+.QuoteForm .title{
+    text-align: center;
+}
+.QuoteForm .title .top-title{
+    font-size: 14px;
+    color: orangered;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.QuoteForm .title .main-title{
+    font-size: calc(1.8vw + 16px);
+}
+.QuoteForm .formFlex{
+    display: flex;
+    padding-top: 30px;
+}
+.QuoteForm .formFlex .UserForm{
+    flex: 1;
+}
+.QuoteForm .formFlex .UserForm .userform1{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    padding: 7px 0;
+}
+.QuoteForm .formFlex .UserForm input[type="text"],[type="date"],[type="time"]
+{
+    height:40px;
+    width: 100%;
+    padding: 0px 10px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    border: 1px solid rgb(184, 183, 183);
+    border-radius: 5px;
+    color: gray;
+}
+.QuoteForm .formFlex .UserForm input[type="text"]:focus-visible,[type="date"]:focus-visible,[type="time"]:focus-visible{
+    outline: none;
+    border: 1px solid orangered;
+}
+.QuoteForm .formFlex .UserForm .userform2{
+    padding: 7px 0;
+}
+.QuoteForm .formFlex .UserForm select{
+    width: 100%;
+    height: 45px;
+    padding: 0px 10px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    border: 1px solid rgb(184, 183, 183);
+    border-radius: 5px;
+    color: gray;
+}
+.QuoteForm .formFlex .UserForm textarea{
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    border: 1px solid rgb(184, 183, 183);
+    border-radius: 5px;
+    color: gray;
+}
+.QuoteForm .formFlex .UserForm textarea:focus-within{
+    outline: none;
+    border: 1px solid orangered;
+}
+.QuoteForm .formFlex .UserForm select:focus-within{
+      outline: none;
+    border: 1px solid orangered;
+}
+.QuoteForm .formFlex .contact{
+    flex: 0.5;
+}
