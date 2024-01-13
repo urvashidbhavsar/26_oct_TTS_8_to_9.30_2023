@@ -1,0 +1,30 @@
+.mydiv {
+  height: auto;
+  width: 500px;
+  border: 1px solid black;
+}
+.mydiv img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.text h1 {
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+}
+
+.gridbox {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px;
+  gap: 20px;
+}
+.gridbox .box {
+  border: 1px solid black;
+}
+.gridbox .box h1 {
+  text-align: center;
+  text-transform: capitalize;
+}/*# sourceMappingURL=style.css.map */

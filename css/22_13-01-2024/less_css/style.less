@@ -1,0 +1,36 @@
+// less variables 
+@height-auto:auto;
+@width-fit:fit-content;
+@border1 : 1px solid black;
+
+.mydiv{
+    height: @height-auto;
+    width: @width-fit;
+    border: @border1;
+    position: relative;
+
+    img{
+        height: @height-auto;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+
+    .text{
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.554);
+        height: 100%;
+        width: 100%;
+        
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            color: white;
+            display: grid;
+            place-content: center;
+        }
+    }
+}

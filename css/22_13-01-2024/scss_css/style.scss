@@ -1,0 +1,36 @@
+$height-auto:auto;
+$w-500:500px;
+
+.mydiv{
+    height: $height-auto;
+    width: $w-500;
+    border: 1px solid black;
+
+    img{
+        height: auto;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+}
+.text{
+    h1{
+        font-size: 40px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: red;
+    }
+}
+.gridbox{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 20px;
+    gap: 20px;
+
+    .box{
+        border: 1px solid black;
+
+        h1{
+            text-align: center;
+            text-transform: capitalize;
+        }
+    }
+}
