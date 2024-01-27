@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv {
+            height: auto;
+            width: 250px;
+            border: 1px solid black;
+            padding: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- mousedown = press the mouse left button
+        mouseenter = enter on element (only once)
+        mouseleave,mouseout = leave from an element
+        mousemove = every time when mouse move
+        mouseover = over an element exclude child
+        mouseup = click on element and released key
+    -->
+    <div class="mydiv" onmouseup="para()">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque omnis quisquam enim deserunt. Ut facilis
+        dolore quaerat sapiente unde, voluptatem libero dolorem minus, magni ex delectus sit odio ducimus ipsam!
+        <p>paragraph 1</p>
+    </div>
+    <!-- 
+        keydown = press any key on keyboard
+        keypress = press any key on keyboard(alpha, numbers)
+        keyup = press and release key
+     -->
+    <input type="text" name="" id="" onkeyup="para()">
+
+    <script>
+        function para() {
+            alert("read a paragraph")
+        }
+    </script>
+
+</body>
+
+</html>

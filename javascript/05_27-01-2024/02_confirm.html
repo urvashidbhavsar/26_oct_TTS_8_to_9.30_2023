@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="confirmMsg()">Confirm popup</button>
+
+    <script>
+        function confirmMsg() {
+            var msg = confirm("click on any button")
+            if (msg == true) {
+                alert("you can click on ok")
+            } else {
+                alert("you can click on cancel")
+            }
+        }
+    </script>
+</body>
+
+</html>
