@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title1 {
+            font-size: 50px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="setCss()">set css</button>
+    <h1 class="title" id="head">Hello user</h1>
+
+    <script>
+        function setCss() {
+            let h1 = document.getElementById("head");
+            if (h1.className == "title") {
+                h1.className = "title1"
+            } else {
+                h1.className = "title"
+            }
+        }
+    </script>
+</body>
+
+</html>

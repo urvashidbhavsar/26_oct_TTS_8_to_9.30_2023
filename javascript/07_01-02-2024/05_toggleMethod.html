@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title1 {
+            font-size: 50px;
+            color: darkblue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border: 1px solid black;
+            padding: 5px;
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="toggleCss()">set css</button>
+
+    <h1 class="title">hello user</h1>
+
+    <script>
+        function toggleCss() {
+            let h1 = document.querySelector(".title")
+            h1.classList.toggle("title1")
+        }
+    </script>
+</body>
+
+</html>
