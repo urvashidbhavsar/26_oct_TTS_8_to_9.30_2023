@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myimg {
+            width: 500px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="setImg()">click to set image</button>
+    <hr>
+    <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" alt=""
+        id="image">
+
+    <script>
+        function setImg() {
+            let img = document.getElementById("image");
+            // img.setAttribute("width", "300px")
+            // img.setAttribute("class", "myimg")
+            img.setAttribute("style", "border:3px dashed red")
+        }
+    </script>
+</body>
+
+</html>

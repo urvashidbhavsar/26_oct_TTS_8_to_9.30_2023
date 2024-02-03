@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="addList()">click to add</button>
+    <ul class="list">
+        <li>List 1</li>
+    </ul>
+
+    <script>
+        function addList() {
+            let list = document.createElement("li");
+            let listText = document.createTextNode("My new list");
+            list.appendChild(listText);
+            document.querySelector(".list").append(list)
+        }
+    </script>
+</body>
+
+</html>
