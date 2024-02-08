@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv {
+            height: 200px;
+            width: 200px;
+            background-color: cadetblue;
+            display: grid;
+            place-content: center;
+            color: white;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mydiv"></div>
+    <script>
+        let div = document.querySelector(".mydiv");
+        let start = 100;
+        var count = setInterval(() => {
+            div.innerHTML = ++start;
+            if (start == 400) {
+                clearInterval(count)
+            }
+        }, 60);
+    </script>
+</body>
+
+</html>

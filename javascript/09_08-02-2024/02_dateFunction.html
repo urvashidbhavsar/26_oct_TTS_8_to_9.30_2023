@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="date"></h1>
+    <h1 id="showdate"></h1>
+    <h1 id="showtime"></h1>
+    <script>
+        var dt = new Date();
+        document.getElementById("date").innerHTML = dt;
+
+        // system understand month 0 to 11
+        document.getElementById("showdate").innerHTML = dt.getDate() + "-" + (dt.getMonth() + 1) + "-" + dt.getFullYear();
+
+        document.getElementById("showtime").innerHTML = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds() + "<br> Day is : " + dt.getDay()
+    </script>
+</body>
+
+</html>

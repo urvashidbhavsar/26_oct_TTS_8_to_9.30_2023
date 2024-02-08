@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn1">click here</button>
+    <button id="btn2" onclick="msg()">click here</button>
+
+    <script>
+        let b = document.getElementById("btn1");
+        b.addEventListener("click", () => {
+            alert("hello")
+        })
+
+        var msg = () => {
+            alert("welcome")
+        }
+    </script>
+</body>
+
+</html>
