@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var person = {
+            firstname: "urvashi",
+            mobileNo: 9876543210,
+            address: "surat",
+            Doj: "23-02-2020"
+        }
+        console.log(person);
+
+        // to print single object value
+        document.write(person.firstname + "<br>")
+        document.write(person.address)
+
+        let per;
+        for (per in person) {
+            console.log(`${per} => ${person[per]}`);
+        }
+    </script>
+</body>
+
+</html>
