@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="validation.css">
+</head>
+
+<body>
+    <div class="user-form">
+        <form action="#">
+            <div class="row">
+                <div>
+                    <label for="">Mobile No</label>
+                </div>
+                <div>
+                    <input type="text" name="" id="mobile" placeholder="Enter number" maxlength="10"
+                        onblur="return checkNo()" onkeyup="return mobileExCheck()">
+                </div>
+                <div>
+                    <span id="msg"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <button onclick="return checkNo()">submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function checkNo() {
+            let mno = document.getElementById("mobile");
+            if (mno.value == "" || mno.value == null) {
+                document.getElementById("msg").innerHTML = "Enter Mobile No";
+                mno.classList.add("error");
+                mno.focus()
+            }
+            return false;
+        }
+        function mobileExCheck() {
+            let mno = document.getElementById("mobile");
+            let mnoex = /^[0-9]*$/
+            let start = /^[6-9]/
+            if (!mnoex.test(mno.value)) {
+                document.getElementById("msg").innerHTML = "Alphabets are not allowed"
+                mno.classList.add("error")
+            } else if (!start.test(mno.value)) {
+                document.getElementById("msg").innerHTML = "number start with 6-9"
+                mno.classList.add("error")
+            }
+            else if (mno.value.length < 10) {
+                document.getElementById("msg").innerHTML = "Enter 10 digits"
+                mno.classList.add("error")
+            } else {
+                document.getElementById("msg").innerHTML = ""
+                mno.classList.remove("error")
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>

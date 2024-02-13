@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="validation.css">
+</head>
+
+<body>
+    <div class="user-form">
+        <form action="#">
+            <div class="row">
+                <div>
+                    <label for="">Enter name</label>
+                </div>
+                <div>
+                    <input type="text" name="" id="user" placeholder="Enter your name" onblur="return checkUserName()"
+                        onkeyup="return checkNameEx()" maxlength="30">
+                </div>
+                <div>
+                    <span id="msg"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <button onclick="return checkUserName()">submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // click event
+        function checkUserName() {
+            let uname = document.getElementById("user");
+            if (uname.value == "" || uname.value == null) {
+                document.getElementById("msg").innerHTML = "please enter your name";
+                uname.classList.add("error")
+                uname.focus()
+            }
+            return false
+        }
+        // keyboard event 
+        function checkNameEx() {
+            let uname = document.getElementById("user");
+            let nameEx = /^[a-zA-Z]*$/;
+            if (!(nameEx.test(uname.value))) {
+                document.getElementById("msg").innerHTML = "Number not allowed"
+                uname.classList.add("error")
+            } else if (uname.value.length < 2) {
+                document.getElementById("msg").innerHTML = "enter proper name"
+                uname.classList.add("error")
+            } else {
+                document.getElementById("msg").innerHTML = ""
+                uname.classList.remove("error")
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>
