@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="validation.css">
+</head>
+
+<body>
+    <div class="user-form">
+        <form action="#">
+            <div class="row">
+                <div>
+                    <label for="">Email Id</label>
+                </div>
+                <div>
+                    <input type="text" name="" id="mail" onblur="return emailCheck()" onkeyup="return emailExCheck()">
+                </div>
+                <div>
+                    <span id="msg"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <button onclick="return emailCheck()">submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // click event 
+        function emailCheck() {
+            let email = document.getElementById("mail");
+            if (email.value == "" || email.value == null) {
+                document.getElementById("msg").innerHTML = "Enter your email";
+                email.classList.add("error")
+                email.focus()
+            }
+            return false;
+        }
+
+        function emailExCheck() {
+            let email = document.getElementById("mail");
+            let ex = /^[a-z0-9.\.]+@[a-z]+\.[a-z]{2,3}$/;
+            if (ex.test(email.value)) {
+                document.getElementById("msg").innerHTML = ""
+                email.classList.remove("error")
+            } else {
+                document.getElementById("msg").innerHTML = "Enter proper Email"
+                email.classList.add("error")
+            }
+            return false;
+        }
+    </script>
+</body>
+
+</html>
