@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- argument are depends on your program and your logic -->
+    <p>Sum is :(45+56) <span id="msg1"></span></p>
+
+    <button onclick="sum()">add value</button>
+
+    <script>
+        function sum() {
+            var a = 45, b = 56;
+            document.getElementById("msg1").innerHTML = (a + b)
+        }
+    </script>
+
+    <button onclick="addition(4,5,5)">sum</button>
+    <button onclick="addition(10,10,5)">addition</button>
+
+    <script>
+        function addition(a, b, c) {
+            alert(`addition is ${a + b + c}`)
+        }
+    </script>
+</body>
+
+</html>

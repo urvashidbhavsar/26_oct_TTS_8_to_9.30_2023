@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="padding: 10px;">
+        <label for="">Enter number 1 : </label>
+        <input type="text" name="" id="num1">
+    </div>
+    <div style="padding: 10px;">
+        <label for="">Enter Number 2: </label>
+        <input type="text" name="" id="num2">
+    </div>
+    <div style="padding: 10px;">
+        <button onclick="sum('num1','num2','msg')">Addition</button>
+    </div>
+    <p>Answer is : <span id="msg"></span></p>
+
+    <script>
+        function sum(n1, n2, ans) {
+            let num1 = Number(document.getElementById(n1).value);
+            let num2 = Number(document.getElementById(n2).value);
+            document.getElementById(ans).innerHTML = Number(num1 + num2)
+        }
+    </script>
+</body>
+
+</html>

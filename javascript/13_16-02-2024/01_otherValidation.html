@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="validation.css">
+</head>
+
+<body>
+    <div class="user-form">
+        <form action="#">
+            <div class="row">
+                <div>
+                    <label for="">Gender : </label>
+                </div>
+                <div>
+                    <div>
+                        <input type="radio" name="gen" id="male" onblur="return checkValidate()">
+                        <label for="">Male</label>
+                        <input type="radio" name="gen" id="female">
+                        <label for="">Female</label>
+                    </div>
+                </div>
+                <div>
+                    <span id="msg1" class="msg"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <label for="">Subject : </label>
+                </div>
+                <div>
+                    <input type="checkbox" name="c1" id="c1" onblur="return checkValidate()">
+                    <label for="">html</label>
+                    <input type="checkbox" name="c2" id="c2">
+                    <label for="">css</label>
+                    <input type="checkbox" name="c3" id="c3">
+                    <label for="">js</label>
+                </div>
+                <div>
+                    <span id="msg2" class="msg"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <label for="">City : </label>
+                </div>
+                <div>
+                    <select name="" id="citylist" onblur="return checkValidate()">
+                        <option value="-1">---select---</option>
+                        <option value="">surat</option>
+                        <option value="">navsari</option>
+                    </select>
+                </div>
+                <div>
+                    <span id="msg3" class="msg"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <button onclick="return checkValidate()">submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function checkValidate() {
+            let m = document.getElementById("male");
+            let f = document.getElementById("female");
+            if (m.checked == false && f.checked == false) {
+                document.getElementById("msg1").innerHTML = "select gender";
+            } else {
+                document.getElementById("msg1").innerHTML = "";
+            }
+
+            let chk1 = document.getElementById("c1").checked;
+            let chk2 = document.getElementById("c2").checked;
+            let chk3 = document.getElementById("c3").checked;
+            if (chk1 == false && chk2 == false && chk3 == false) {
+                document.getElementById("msg2").innerHTML = "select subject";
+            } else {
+                document.getElementById("msg2").innerHTML = "";
+            }
+
+            let city = document.getElementById("citylist");
+            if (city.value == -1) {
+                document.getElementById("msg3").innerHTML = "select value"
+            } else {
+                document.getElementById("msg3").innerHTML = ""
+            }
+            return false
+        }
+    </script>
+
+</body>
+
+</html>
