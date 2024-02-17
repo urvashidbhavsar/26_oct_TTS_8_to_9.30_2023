@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#">
+        <label for="">First name : </label>
+        <input type="text" name="firstname" id="fname" placeholder="First" onblur="return CheckBlank(this,'msg1')"
+            onkeyup="return regEx(this, 'msg1')">
+        <span id="msg1" style="color:red"></span>
+
+        <br><br>
+        <label for="">Middle Name : </label>
+        <input type="text" name="middlename" id="mname" placeholder="Middle" onblur="return CheckBlank(this,'msg2')"
+            onkeyup="return regEx(this, 'msg2')">
+        <span id="msg2" style="color:red"></span>
+
+        <br><br>
+        <label for="">Last name : </label>
+        <input type="text" name="lastname" id="lname" placeholder="Last" onblur="return CheckBlank(this,'msg3')"
+            onkeyup="return regEx(this, 'msg3')">
+        <span id="msg3" style="color:red"></span>
+    </form>
+
+    <script>
+        function CheckBlank(blank, msg) {
+            // let b = document.getElementById(blank).value;
+            if (blank.value == "" || blank.value == null) {
+                document.getElementById(msg).innerHTML = "Please, fill value"
+            }
+            return false
+        }
+        function regEx(exinput, msg) {
+            let ptn = /^[a-zA-Z]*$/
+            if (!ptn.test(exinput.value)) {
+                document.getElementById(msg).innerHTML = "invalid name"
+            } else {
+                document.getElementById(msg).innerHTML = ""
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>

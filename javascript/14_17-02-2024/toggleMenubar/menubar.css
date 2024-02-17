@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+header{
+    /* background-color: rgb(19, 19, 19); */
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: 0.5s ease;
+}
+/* create replacement class of header */
+.topheader{
+    background-color: rgb(19, 19, 19);
+}
+header .menu-container{
+    max-width: 1300px;
+    margin: auto;
+}
+header .menu-p{
+   padding: 16px 10px;
+}
+header .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+header .navbar .logo{
+    flex: 0.15;
+}
+header .navbar .logo h1{
+    font-size: 35px;
+    color: white;
+}
+header .navbar .nav{
+    flex: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+header .navbar .nav ul{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+header .navbar .nav ul li{
+    padding: 5px;
+}
+header .navbar .nav ul a{
+    color: white;
+}
+header .navbar .nav ul i{
+    color: white;
+    font-size: 12px;
+    padding: 4px;
+}
+header .navbar .account{
+    flex: 0.5;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 30px;
+}
+header .navbar .account a{
+    color :white;
+}
+header .navbar .account .link2{
+    border: 1px solid white;
+    padding: 8px;
+    border-radius: 5px;
+}
+header .navbar .togglebtn{
+    display: none;
+}
+header .navbar .tbtn{
+    height: 35px;
+    width: 35px;
+    font-size: 22px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+header .navbar .search{
+    display: flex;
+}
+header .navbar .search .icon{
+  height: 30px;
+    width: 30px;
+    border: 1px solid gray;
+    border-right: none;
+    background-color: rgba(128, 128, 128, 0.357);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px 0 0  5px;
+}
+header .navbar .search span{
+    color: white;
+    
+}
+header .navbar .search input{
+    height: 30px;
+    width: 300px;
+    padding: 0 10px;
+    border: 1px solid gray;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    background-color: rgba(128, 128, 128, 0.357);
+}
+/* create a random class of replacement of nav class. which is not include in html structure. */
+header .navbar .navigation{
+    background-color: rgb(31, 31, 31);
+    position: absolute;
+    top: 63px;
+    width: 100%;
+}
+header .navbar .navigation ul{
+    align-items: flex-start;
+    flex-direction: column;
+}
+header .navbar .navigation .search{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+@media (max-width:576px) {
+    header .navbar .nav{
+        display: none;
+    }
+    header .navbar .togglebtn{
+        display: block;
+    }
+    header .navbar .navigation{
+        display: block;
+    }
+}
+@media (min-width:576px) {
+    header .navbar .nav{
+        display: none;
+    }
+    header .navbar .togglebtn{
+        display: block;
+    }
+    header .navbar .navigation{
+        display: block;
+    }
+}
+@media (min-width:1200px) {
+    header .navbar .nav{
+        display: flex;
+    }
+    header .navbar .togglebtn{
+        display: none;
+    }
+    
+}
+
+/* dropdown */
+header .navbar .nav .dropdown{
+    position: relative;
+}
+header .navbar .nav .dropdown .menu{
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 11px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 5px black;
+    width: 103px;
+}
+header .navbar .nav .dropdown .menu a{
+    color: black;
+}
+/* replacement class */
+header .navbar .nav .dropdown .drop{
+    display: block;
+}
