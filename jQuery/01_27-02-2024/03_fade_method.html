@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- fade methods are : fadeIn(), fadeOut(), fadeToggle() and fadeTo() 
+        these functions are effected on element opacity property
+    -->
+    <button id="btn1">fade in</button>
+    <button id="btn2">fade out</button>
+    <button id="btn3">fade toggle</button>
+    <hr>
+
+    <div class="div1"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $(".div1").fadeIn(1000)
+            })
+            $("#btn2").click(function () {
+                $(".div1").fadeOut(1000)
+            })
+            $("#btn3").click(function () {
+                $(".div1").fadeToggle(2000)
+            })
+        })
+    </script>
+</body>
+
+</html>

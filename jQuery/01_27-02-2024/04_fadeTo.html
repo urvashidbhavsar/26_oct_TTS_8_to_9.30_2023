@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img1 {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://e0.pxfuel.com/wallpapers/78/977/desktop-wallpaper-beautiful-nature-computer-nature-full-screen.jpg"
+        alt="" width="500px" class="img1">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".img1").mouseover(function () {
+                $(".img1").fadeTo(1000, 1)
+            })
+            $(".img1").mouseout(function () {
+                $(".img1").fadeTo(1000, 0.5)
+            })
+        })
+    </script>
+</body>
+
+</html>

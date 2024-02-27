@@ -1,0 +1,17 @@
+jquery is a js library to use its functionality in our website.
+
+version : jquery3 3.7.1
+
+website : https://jquery.com/
+
+there are lots of method / function are given to make your website easily dynamic or attractive.
+
+syntax : 
+$(document).ready(function(){
+    $("selector").event(function(){
+        $("selector").jquery_method()
+    })
+})
+
+jquery use via cdn or downloading offline package
+
