@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .new1 {
+            height: auto;
+            width: 300px;
+            background-color: aquamarine;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: 2px solid blue;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .new2 {
+            height: auto;
+            width: 300px;
+            background-color: blue;
+            color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            border: 2px solid black;
+            padding: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 4 type of css class method : 
+        addClass(), removeClass(), toggleClass(), hasClass() = check value
+    -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <button id="btn1">add class</button>
+    <button id="btn2">remove class</button>
+    <button id="btn3">Toggle class</button>
+    <button id="btn4">has class</button>
+    <hr>
+
+    <div class="div1">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore ullam aut deleniti tenetur repellendus sit
+        atque aliquid dolores cumque, consectetur rerum sunt ea asperiores expedita facere laborum quo, praesentium
+        harum.
+    </div>
+    <div class="div2">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus minima doloremque laboriosam deserunt!
+        Sunt repellat facilis rerum ea qui. Necessitatibus ea reiciendis, eos voluptas voluptatum commodi blanditiis
+        voluptatibus saepe veritatis!
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $(".div1").addClass("new1")
+            })
+
+            $("#btn2").click(function () {
+                $(".div1").removeClass("new1")
+            })
+
+            $("#btn3").click(function () {
+                $(".div2").toggleClass("new2")
+            })
+
+            $("#btn4").click(function () {
+                if ($(".div2").hasClass("new2") == true) {
+                    alert("class exist")
+                } else {
+                    alert("class not exist")
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv {
+            height: 300px;
+            width: 200px;
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <div class="mydiv"></div>
+
+    <script>
+        $(document).ready(function () {
+            $(".mydiv").slideUp(4000)
+
+            $(".mydiv").mouseover(function () {
+                $(".mydiv").stop()
+            })
+            $(".mydiv").mouseout(function () {
+                $(".mydiv").slideUp(4000)
+            })
+        })
+    </script>
+</body>
+
+</html>
