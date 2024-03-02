@@ -1,0 +1,6 @@
+for get and set attribute there is 4 functions are used :
+ 
+(1) text()
+(2) html()
+(3) val()
+(4) attr()
