@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv {
+            height: auto;
+            width: fit-content;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- wrap function => wrap() wrapAll() wrapInner() unwrap() -->
+
+    <button id="btn1">wrap</button>
+    <button id="btn4">unwrap</button>
+
+    <p class="p1">this is my paragraph1</p>
+    <p class="p1">this is my paragraph2</p>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $(".p1").wrap("<div class='mydiv'></div>")
+            })
+            $("#btn4").click(function () {
+                $(".p1").unwrap()
+            })
+        })
+    </script>
+
+    <hr>
+    <button id="btn2">wrapAll</button>
+
+    <p class="p2">this is my paragraph1</p>
+    <p class="p2">this is my paragraph2</p>
+
+    <script>
+        $(function () {
+            $("#btn2").click(function () {
+                $(".p2").wrapAll("<div class='mydiv'></div>")
+            })
+        })
+    </script>
+    <hr>
+    <button id="btn3">wrapInner</button>
+
+    <p class="p3">this is my paragraph1</p>
+    <p class="p3">this is my paragraph2</p>
+    <script>
+        $(function () {
+            $("#btn3").click(function () {
+                $(".p3").wrapInner("<b></b>")
+            })
+        })
+    </script>
+</body>
+
+</html>

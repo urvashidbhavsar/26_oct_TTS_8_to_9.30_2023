@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid {
+            display: flex;
+            gap: 30px;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+        }
+
+        .set {
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <button id="btn1">click here</button>
+    <hr>
+
+    <div class="grid">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+        <div class="box box6"></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                // $(".box1").siblings(".box4").addClass("set")
+                // $(".box1").next().addClass("set");
+                // $(".box1").nextAll().addClass("set");
+                // $(".box1").nextUntil(".box4").addClass("set");
+                // $(".box6").prev().addClass("set");
+                // $(".box6").prevAll().addClass("set");
+                // $(".box6").prevUntil(".box1").addClass("set");
+
+                // $(".box").filter(".box3").addClass("set")
+                // $(".box").first().addClass("set")
+                // $(".box").last().addClass("set")
+                // $(".box").eq(3).addClass("set")
+                $(".box").not(".box4").addClass("set")
+            })
+        })
+    </script>
+</body>
+
+</html>

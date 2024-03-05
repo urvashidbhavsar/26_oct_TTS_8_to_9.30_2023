@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,
+        p {
+            border: 1px solid gray;
+            margin: 10px;
+        }
+
+        .set {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <button id="btn1">click here</button>
+    <hr>
+
+    <div class="main"> Main
+        <div class="sub1"> Sub1
+            <p>my Para</p>
+        </div>
+        <div class="sub2"> Sub2
+            <p>My para</p>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                // $("p").parent(".sub1").addClass("set")
+                // $("p").parents(".main").addClass("set")
+                // $("p").parentsUntil("body").addClass("set")
+
+                // $(".main").children(".sub2").addClass("set")
+                $(".main").find("p").addClass("set")
+            })
+        })
+    </script>
+</body>
+
+</html>

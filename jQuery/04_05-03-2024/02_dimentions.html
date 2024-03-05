@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv {
+            height: 150px;
+            width: 170px;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        p {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- height() width() innerHeight() innerWidth() outerHeight() 
+        outerWidth() 
+    -->
+
+    <div id="div1"></div>
+    <div id="div2" class="mydiv"></div>
+    <p id="msg"></p>
+    <script>
+        $(document).ready(function () {
+            $("#div1").height(100).width(100).css({
+                backgroundColor: "green"
+            })
+            $txt = "";
+            $txt = `Height : ${$("#div2").height()} <br>
+                    width : ${$("#div2").width()} <br>
+                    innerHeight : ${$("#div2").innerHeight()} <br>
+                    innerWidth : ${$("#div2").innerWidth()} <br>
+                    outerHeight : ${$("#div2").outerHeight()} <br>
+                    outerWidth : ${$("#div2").outerWidth()} <br>
+                    outerHeight(m) : ${$("#div2").outerHeight(true)} <br>
+                    outerWidth(m) : ${$("#div2").outerWidth(true)} <br>`;
+            $("#msg").html($txt)
+        })
+    </script>
+</body>
+
+</html>
