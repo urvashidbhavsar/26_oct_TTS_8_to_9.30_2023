@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bxslider css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" />
+    <style>
+        * {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 600px;
+        }
+
+        .bx-wrapper {
+            box-shadow: none;
+            border: none;
+            background-color: unset;
+        }
+
+        .bx-wrapper .bx-controls-auto,
+        .bx-wrapper .bx-pager {
+            bottom: 32px !important;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a.active {
+            background-color: red !important;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            background-color: white !important;
+        }
+
+        .slider1 {
+            background: url(https://i.pinimg.com/originals/a3/15/80/a3158011a18e623c4d25b68846ee9383.jpg) no-repeat center;
+            background-size: cover;
+        }
+
+        .slider2 {
+            background: url(https://wallpapers.com/images/featured/desktop-lsjkr6wg7ctq97qv.jpg) no-repeat center;
+            background-size: cover;
+        }
+
+        .slider3 {
+            background: url(https://wallpapercg.com/download/fairy-house-3840x2160-9802.jpg) no-repeat center;
+            background-size: cover;
+        }
+
+        .slider4 {
+            background: url(https://i.redd.it/d2hd73xxwvaa1.jpg) no-repeat center;
+            background-size: cover;
+        }
+
+        .slider {
+            padding: 250px 100px;
+            text-align: center;
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            position: relative;
+            z-index: 1;
+            flex: 1;
+        }
+
+        .slider::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.799);
+            z-index: -1;
+        }
+
+        .newsliders {
+            display: flex;
+        }
+
+        .text {
+            flex: 1;
+            display: grid;
+            place-content: center;
+            padding: 20px;
+            font-size: 22px;
+            background-color: cadetblue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="myslider">
+        <div>
+            <div class="newsliders">
+                <div class="slider1 slider">
+                    <h1>Image 1</h1>
+                </div>
+                <div class="text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam sit in aliquid reprehenderit labore?
+                    Suscipit dicta quis magni perferendis ad ipsum, laudantium, blanditiis dolorum reprehenderit iure
+                    deleniti ratione ducimus quae?
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="newsliders">
+                <div class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi expedita quam autem ex quia voluptates
+                    harum eius culpa? Cumque totam quidem, repudiandae quas corrupti illo atque a sapiente amet earum.
+                </div>
+                <div class="slider2 slider">
+                    <h1>Image 2</h1>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="newsliders">
+                <div class="slider3 slider">
+                    <h1>Image 3</h1>
+                </div>
+                <div class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias vitae natus eligendi qui esse
+                    illum
+                    consectetur quo blanditiis. Deserunt tempora deleniti cupiditate possimus nam ipsa incidunt
+                    veritatis
+                    cum hic fuga.
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="newsliders">
+                <div class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem rem praesentium recusandae
+                    reprehenderit
+                    illum dolore magni deserunt, qui provident perspiciatis explicabo soluta fugit asperiores nam
+                    doloremque
+                    optio aliquam facere fuga.
+                </div>
+                <div class="slider4 slider">
+                    <h1>Image 4</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bxslider js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/vendor/jquery.easing.1.3.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".myslider").bxSlider({
+                mode: "fade",
+            })
+        })
+    </script>
+</body>
+
+</html>
