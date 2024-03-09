@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- 
+            ajax is an asynchronized javascript and xml file
+            use to load data without reloading whole page
+    -->
+
+    <button id="btn">click to load file</button>
+
+    <div style="font-size: 40px; font-family: Arial, Helvetica, sans-serif;" class="mydiv"></div>
+
+    <script>
+        $(document).ready(function () {
+            // $("#btn").click(function () {
+            $(".mydiv").load("data.txt")
+            // })
+        })
+    </script>
+
+
+</body>
+
+</html>

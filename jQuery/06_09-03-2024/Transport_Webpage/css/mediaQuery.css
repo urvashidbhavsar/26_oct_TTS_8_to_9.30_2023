@@ -1,0 +1,238 @@
+@media (max-width:576px) {
+    .container{
+        width: 100%;
+    }
+    .help{
+        display: none;
+    }
+    header .navbar .nav{
+        display: none;
+    }
+    header .navbar .icon .menubtn{
+        display:block;
+    }
+    header .navbar{
+        justify-content: space-between;
+    }
+    .homepage .home-grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .btn{
+        padding: 15px 20px;
+    }
+    .contactInfo .gridBox{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .serviceSec .title .main-title{
+        width: 100%;
+    }
+    .serviceSec .gridBox{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .deliverSec .d-info{
+        display: flex;
+        flex-direction: column;
+    }
+    .deliverSec .d-info .packingInfo .con-padd{
+        padding: 70px 20px; 
+    }
+    .deliverSec .d-info .packingInfo .count-info{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .deliverSec .d-info .bgimage{
+        padding: 139px 0px;  
+    }
+    .QuoteForm .formFlex{
+        flex-direction: column;
+    }
+    .QuoteForm .formFlex .UserForm .userform1{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .ArticleSec .CardGrid{
+        grid-template-columns: repeat(1,1fr);
+    }
+    footer .footerBox{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+/* ==================================================================== */
+@media (min-width:576px) {
+    .container{
+        max-width: 560px;
+    }
+     .help{
+        display: block;
+    }
+    header .navbar .nav{
+        display: none;
+    }
+    header .navbar .icon .menubtn{
+        display:block;
+    }
+    header .navbar{
+        justify-content: space-between;
+    }
+     .homepage .home-grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .contactInfo .gridBox{
+        grid-template-columns: repeat(1,1fr);
+    }
+     .serviceSec .title .main-title{
+        width: 80%;
+    }
+    .serviceSec .gridBox{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .serviceSec .gridBox .box3{
+        grid-row:2;
+        grid-column: 1 / span 2;
+        width: 350px;
+        margin: auto;
+    }
+     .deliverSec .d-info{
+        display: flex;
+        flex-direction: column;
+    }
+    .deliverSec .d-info .packingInfo .con-padd{
+        padding: 70px 20px; 
+    }
+    .deliverSec .d-info .packingInfo .count-info{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+     .deliverSec .d-info .bgimage{
+        padding: 139px 0px;  
+    }
+     .QuoteForm .formFlex{
+        flex-direction: column;
+    }
+    .QuoteForm .formFlex .UserForm .userform1{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .ArticleSec .CardGrid{
+        grid-template-columns: repeat(1,1fr);
+    }
+    footer .footerBox{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+/* ==================================================================== */
+@media (min-width:768px) {
+    .container{
+        max-width: 750px;
+    }
+    /* header section values inherit from min 576px */
+    /* home grid inherit from min 576px */
+    .contactInfo .gridBox{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .deliverSec .d-info .packingInfo .count-info{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+     .deliverSec .d-info .bgimage{
+        padding: 169px 0px;  
+        background-size: 100%;
+    }
+    /* quote form inherit from min width 768px */
+    .ArticleSec .CardGrid{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .card3{
+        grid-row: 2;
+        grid-column: 1/span 2;
+        width: 380px;
+        margin: auto;
+    }
+    footer .footerBox{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .fbox4{
+        grid-row: 2;
+        grid-column: 1/span 2;
+    }
+}
+/* ==================================================================== */
+@media (min-width:992px) {
+    .container{
+        max-width: 950px;
+    }
+    header .navbar .nav{
+        display: flex;
+    }
+    header .navbar .icon .menubtn{
+        display:none;
+    }
+    header .navbar{
+        justify-content: unset;
+    }
+     .homepage .home-grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+     .serviceSec .title .main-title{
+        width: 50%;
+    }
+    .serviceSec .gridBox{
+        grid-template-columns: repeat(3,1fr);
+    }
+     .serviceSec .gridBox .box3{
+        grid-row:unset;
+        grid-column: unset;
+        width: unset;
+        margin: unset;
+    }
+     .QuoteForm .formFlex{
+        flex-direction: row;
+    }
+    .QuoteForm .formFlex .UserForm .userform1{
+        grid-template-columns: repeat(2,1fr);
+    }
+     .ArticleSec .CardGrid{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .card3{
+        grid-row: unset;
+        grid-column: unset;
+        width: unset;
+        margin: unset;
+    }
+      footer .footerBox{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .fbox4{
+        grid-row: unset;
+        grid-column: unset;
+    }
+}
+/* ==================================================================== */
+@media (min-width:1200px) {
+    .container{
+        max-width: 1140px;
+    }
+     .contactInfo .gridBox{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .deliverSec .d-info{
+        display: flex;
+        flex-direction: row;
+    }
+    .deliverSec .d-info .packingInfo .con-padd{
+        padding: 70px 50px; 
+    }
+    .deliverSec .d-info .bgimage{
+        padding: unset;  
+         background-size: 130%;
+    }
+      .QuoteForm .formFlex .UserForm .userform1{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+/* ==================================================================== */
+@media (min-width:1400px) {
+    .container{
+        max-width: 1350px;
+    }
+}
