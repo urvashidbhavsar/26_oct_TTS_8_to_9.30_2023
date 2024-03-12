@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        td,
+        th {
+            padding: 10px;
+        }
+
+        .loader-hide {
+            display: none;
+        }
+
+        .error {
+            border: 1px solid red;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #ef8585;
+            color: red;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <button id="getdata">Load data</button>
+    <hr>
+
+    <table border="1" class="user-table">
+        <tbody class="title">
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+        </tbody>
+        <tbody class="mydata" style="text-align: center;">
+            <tr class="loader">
+                <td colspan="4">
+                    <i class="fa fa-spin fa-sync-alt fa-2x"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#getdata").on("click", function () {
+                $.ajax({
+                    // url: "https://jsonplaceholder.typicode.com/posts",
+                    url: "https://fakestoreapi.com/products",
+                    type: "GET",
+                    beforeSend: function () {
+                        $(".loader").removeClass("loader-hide");
+                    },
+                    success: function (responsive, status) {
+                        $(".loader").addClass("loader-hide");
+                        let tabledata = "";
+                        for (let i = 0; i < responsive.length; i++) {
+                            const { id, title, price, image } = responsive[i];
+                            tabledata += `
+                            <tr>
+                                <td>${id}</td>
+                                <td>${title}</td>
+                                <td>&#8377; ${price}</td>
+                                <td><img src='${image}'></td>
+                            </tr>
+                        `
+                        }
+                        $(".user-table").find(".mydata").append(tabledata);
+                        console.log(status);
+                    },
+                    error: function (error, status) {
+                        $(".loader").addClass("loader-hide");
+                        let tabledata = "";
+                        tabledata += `
+                            <tr>
+                                <td colspan='4'>
+                                    <div class='error'>
+                                        Can't Load data
+                                    </div>
+                                </td>
+                            </tr>
+                        `
+                        $(".user-table").find(".mydata").append(tabledata);
+                    },
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
