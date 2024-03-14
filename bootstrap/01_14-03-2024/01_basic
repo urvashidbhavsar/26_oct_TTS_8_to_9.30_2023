@@ -1,0 +1,16 @@
+bootstrap is a css library / framework.
+
+version : bootstrap5 5.3.3
+
+website : https://getbootstrap.com/
+
+bootstrap4 and bootstrap5
+(1) in bootstrap4 there are all components are made in jquery, while in bootstrap5 all component are made in vanilla js.
+
+(2) there is only 5 reponsive tiers in bootstrap4, while 6 in bootstrap5.
+
+(3) jumbotrone is removed from bootstrap5.
+
+(4) colors shades added in bootstrap5.
+
+(5) new components are available in bootstrap5. like a offcanvas, list group behaviour, accordian etc
