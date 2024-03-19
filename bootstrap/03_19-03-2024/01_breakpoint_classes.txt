@@ -1,0 +1,15 @@
+css                                     bootstrap class 
+(1) max-width : 576px                        - 
+(2) min-width : 576px                      sm (small)
+(3) min-width : 768px                      md (medium)
+(4) min-width : 992px                      lg (large)
+(5) min-width : 1200px                     xl (extra large)
+(6) min-width : 1400px                    xxl (extra extra large)
+
+containers for set layout : 
+(1) container 
+(2) container-fluid 
+
+grid system :
+row and column system. 
+in 1 row there is 12 column system available.
