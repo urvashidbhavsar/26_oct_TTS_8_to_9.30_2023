@@ -1,0 +1,23 @@
+element                                 bootstrap class 
+================================================================
+(1) label                                   form-label 
+(2) input type 
+    text, date, password, search,           form-control 
+    datetime, datetime-local, number 
+    file
+    textarea
+
+(3) select                                  form-select 
+(4) range                                   form-range 
+(5) color                                   form-control-color, 
+                                        border => form-control 
+            
+(6) input type                          
+    parent div                          form-check
+    parent div (set x axes)             form-check-inline
+    radio, checkbox                     form-check-input 
+    label                               form-check-label
+
+(7) input-group 
+    parent                                 input-group
+    child = button, label and any          input-group-text
