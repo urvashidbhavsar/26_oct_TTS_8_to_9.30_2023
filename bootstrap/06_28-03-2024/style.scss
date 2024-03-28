@@ -1,0 +1,121 @@
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+// ====================
+header {
+    background-color: rgb(210, 244, 255);
+
+    img {
+        width: 50px;
+    }
+
+    .navbar-toggler {
+        border-radius: 0;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    .navbar-toggler:active {
+        box-shadow: 0px 0px 5px gray;
+        transform : scale(0.9);
+    }
+}
+
+.homepage {
+    .slider1 {
+        background     : url(https://wallpapers.com/images/featured/live-desktop-jwhxpov3u0jdebb0.jpg) no-repeat center;
+        background-size: cover;
+    }
+
+    .slider2 {
+        background     : url(https://wallpapers-clan.com/wp-content/uploads/2023/10/aesthetic-apple-orchard-cartoon-desktop-wallpaper-preview.jpg) no-repeat center;
+        background-size: cover;
+    }
+
+    .slider3 {
+        background     : url(https://i.redd.it/d2hd73xxwvaa1.jpg) no-repeat center;
+        background-size: cover;
+    }
+
+    .slider {
+        padding : 150px 100px;
+        position: relative;
+        z-index : 1;
+
+        &:after {
+            content         : "";
+            position        : absolute;
+            top             : 0;
+            left            : 0;
+            right           : 0;
+            bottom          : 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index         : -1;
+        }
+
+        @media (max-width:576px) {
+            padding: 80px 50px;
+        }
+
+        @media (min-width:576px) {
+            padding: 80px 50px;
+        }
+
+        @media (min-width:768px) {
+            padding: 100px 50px;
+        }
+
+        @media (min-width:992px) {
+            padding: 150px 100px;
+        }
+    }
+}
+
+.about-us {
+    background-color: rgb(221, 239, 255);
+
+    .box {
+        padding   : 30px 20px;
+        transition: 0.5s ease;
+
+        .a-link {
+            color: black;
+
+            &:hover {
+                color: green;
+            }
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+}
+
+.services {
+    .ser-img {
+        img {
+            width        : 50px;
+            height       : 50px;
+            object-fit   : cover;
+            border-radius: 50%;
+        }
+    }
+}
+
+.offcanvas {
+    background-color: rgba(0, 0, 0, 0.8);
+}
