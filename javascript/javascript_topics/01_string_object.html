@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var mystring = "Hello World ";
+        var newstring = "      User      "
+        console.log(mystring);
+
+        console.log(mystring.charAt(2));
+        console.log(mystring.charCodeAt(0));
+        console.log(mystring.concat(newstring));
+        console.log(mystring.search('World')); //=> return position
+        console.log(mystring.indexOf('l'));
+        console.log(mystring.lastIndexOf('l'));
+        console.log(mystring.replace("Hello", "New"));
+        // var res = mystring.match(/^[A-Za-z]*$/)
+        var res = mystring.match("Hello")
+        console.log(res);
+
+        console.log(mystring.substr(2, 9)); // => start, length
+        console.log(mystring.substring(3, 9)); // => start, end 
+        console.log(mystring.toLowerCase());
+        console.log(mystring.toLocaleLowerCase());
+        console.log(mystring.toUpperCase());
+        console.log(mystring.toLocaleUpperCase());
+        console.log(mystring.toString());
+        console.log(mystring.valueOf());
+        console.log(newstring);
+        console.log(newstring.trim());
+        console.log(mystring.slice(2,9));
+
+        res = mystring.split(" ")
+        console.log(res[0]);
+        console.log(res[1]);
+
+    </script>
+</body>
+
+</html>
